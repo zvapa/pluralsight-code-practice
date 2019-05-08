@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoreEffectiveLinq", "MoreEffectiveLinq\MoreEffectiveLinq.csproj", "{CC276F66-6F9B-4B06-9201-6AF99FE4BDE6}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpotThePattern1.FilteringCollections", "SpotThePattern1.FilteringCollections\SpotThePattern1.FilteringCollections.csproj", "{14F25368-3046-463E-A603-5DEFE3766844}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpotThePattern2.FindingOneItem", "SpotThePattern2.FindingOneItem\SpotThePattern2.FindingOneItem.csproj", "{88024319-B369-44FA-BD85-AB47FE7BA2CE}"
@@ -33,10 +31,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CC276F66-6F9B-4B06-9201-6AF99FE4BDE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CC276F66-6F9B-4B06-9201-6AF99FE4BDE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CC276F66-6F9B-4B06-9201-6AF99FE4BDE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CC276F66-6F9B-4B06-9201-6AF99FE4BDE6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{14F25368-3046-463E-A603-5DEFE3766844}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{14F25368-3046-463E-A603-5DEFE3766844}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14F25368-3046-463E-A603-5DEFE3766844}.Release|Any CPU.ActiveCfg = Release|Any CPU
