@@ -8,7 +8,7 @@ namespace LinqChallenge5.BishopMoves
 	{
 		static void Main(string[] args)
 		{
-			// What positions can a bishop reach in a single move?
+			// Problem: What positions can a bishop reach in a single move?
 
 			// Objective: Create an enumerable sequence containing the names of 
 			// each square a Bishop chess piece can move to in a single turn.
@@ -29,22 +29,37 @@ namespace LinqChallenge5.BishopMoves
 				.Where(target => Math.Abs(cols.IndexOf(current.col) - cols.IndexOf(target.col)) == Math.Abs(current.row - target.row))
 				.Where(target => target.col != current.col);
 
+			Console.WriteLine("\nSolution 1");
 			foreach ((char col, int row) in validMoves)
 			{
 				Console.WriteLine((col, row));
 			}
 
-			// Alternative solution:
+			// Solution 2:
 
 			IEnumerable<string> validMoves2 = Enumerable.Range('a', 8)
-				.SelectMany(x => Enumerable.Range(1, 8), (c, r) => (col: (char)c, row: r))
-				.Where(x => Math.Abs(x.col - 'c') == Math.Abs(x.row - 6))
-				.Where(x => x.col != 'c')
-				.Select(x => $"{x.col}{x.row}");
+				.SelectMany(pos => Enumerable.Range(1, 8), (c, r) => (col: (char)c, row: r)) // created board tiles as (column, row) tuples
+				.Where(pos => Math.Abs(pos.col - 'c') == Math.Abs(pos.row - 6))
+				.Where(pos => pos.col != 'c')
+				.Select(pos => $"{pos.col}{pos.row}");
 
+			Console.WriteLine("\nSolution 2");
 			foreach (string move in validMoves2)
 			{
 				Console.WriteLine(move);
+			}
+
+			// Solution 3:
+
+			IEnumerable<(char col, int row, int dx, int dy)> validMoves3 = Enumerable.Range('a', 8)
+				.SelectMany(x => Enumerable.Range(1, 8), (c, r) => (col: (char)c, row: r)) // created board tiles as (column, row) tuples
+				.Select(pos => (pos.col, pos.row, dx: Math.Abs(pos.col - 'c'), dy: Math.Abs(pos.row - 6))) // include column and row offset from current
+				.Where(pos => pos.dx == pos.dy && pos.dx != 0); // filter the 'diagonals' and exclude current position
+
+			Console.WriteLine("\nSolution 3");
+			foreach ((char col, int row, int dx, int dy) in validMoves3)
+			{
+				Console.WriteLine((col, row));
 			}
 		}
 	}
