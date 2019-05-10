@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqChallenge4.SortByAge", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqChallenge5.BishopMoves", "LinqChallenge5.BishopMoves\LinqChallenge5.BishopMoves.csproj", "{633382B8-EE3B-41E5-A530-EDCD477285E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqChallenge6.LongestBook", "LinqChallenge6.LongestBook\LinqChallenge6.LongestBook.csproj", "{A0C94371-0F0B-4560-8C91-C14F36461B44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{633382B8-EE3B-41E5-A530-EDCD477285E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{633382B8-EE3B-41E5-A530-EDCD477285E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{633382B8-EE3B-41E5-A530-EDCD477285E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0C94371-0F0B-4560-8C91-C14F36461B44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0C94371-0F0B-4560-8C91-C14F36461B44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0C94371-0F0B-4560-8C91-C14F36461B44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0C94371-0F0B-4560-8C91-C14F36461B44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
