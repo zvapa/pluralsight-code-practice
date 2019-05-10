@@ -51,16 +51,34 @@ namespace LinqChallenge5.BishopMoves
 
 			// Solution 3:
 
-			IEnumerable<(char col, int row, int dx, int dy)> validMoves3 = Enumerable.Range('a', 8)
-				.SelectMany(x => Enumerable.Range(1, 8), (c, r) => (col: (char)c, row: r)) // created board tiles as (column, row) tuples
-				.Select(pos => (pos.col, pos.row, dx: Math.Abs(pos.col - 'c'), dy: Math.Abs(pos.row - 6))) // include column and row offset from current
-				.Where(pos => pos.dx == pos.dy && pos.dx != 0); // filter the 'diagonals' and exclude current position
+			IEnumerable<(char col, int row)> validMoves3 = GetBoardPositions()
+				.Where(p => BishopCanMoveTo(('c', 6), p));
 
 			Console.WriteLine("\nSolution 3");
-			foreach ((char col, int row, int dx, int dy) in validMoves3)
+			foreach ((char col, int row) in validMoves3)
 			{
 				Console.WriteLine((col, row));
 			}
+		}
+
+		/// <summary>
+		/// Generates chess board tiles as (column, row) tuples
+		/// </summary>
+		/// <returns></returns>
+		static IEnumerable<(char col, int row)> GetBoardPositions() => Enumerable.Range('a', 8)
+				.SelectMany(x => Enumerable.Range(1, 8), (c, r) => (col: (char)c, row: r));
+
+		/// <summary>
+		/// Determines whether a Bishop can move from a given position to another
+		/// </summary>
+		/// <param name="startingPosition"></param>
+		/// <param name="targetLocation"></param>
+		/// <returns></returns>
+		static bool BishopCanMoveTo((char col, int row) startingPosition, (char col, int row) targetLocation)
+		{
+			int dx = Math.Abs(targetLocation.col - startingPosition.col);  // calculate column offset
+			int dy = Math.Abs(targetLocation.row - startingPosition.row);  // calculate row offset
+			return dx == dy && dx != 0;  // filter the 'diagonals' and exclude current position
 		}
 	}
 }
