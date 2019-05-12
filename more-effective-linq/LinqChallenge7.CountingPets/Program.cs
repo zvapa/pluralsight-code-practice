@@ -11,15 +11,13 @@ namespace LinqChallenge7.CountingPets
 		{
 			string animals = "Dog,Cat,Rabbit,Dog,Dog,Lizard,Cat,Cat,Dog,Rabbit,Guinea Pig,Dog";
 
-			// Objective: count how many animals are of each type
+			// Objective 1: count how many animals are of each type
 
 			// Solution 1: 
+			IEnumerable<KeyValuePair<string, int>> answer = animals.Split(',')
+				.CountBy(a => a);
 
-			Dictionary<string, int> answer = animals.Split(',')
-				.CountBy(a => a)
-				.ToDictionary(g => g.Key, g => g.Value);
-
-			Console.WriteLine("Solution 1:");
+			Console.WriteLine("Objective 1 - Solution 1:");
 			foreach (KeyValuePair<string, int> kvp in answer)
 			{
 				Console.WriteLine((kvp.Key, kvp.Value));
@@ -30,10 +28,34 @@ namespace LinqChallenge7.CountingPets
 				.GroupBy(a => a)
 				.Select(g => (g.Key, g.Count()));
 
-			Console.WriteLine("\nSolution 2:");
+			Console.WriteLine("\nObjective 1 - Solution 2:");
 			foreach ((string Pet, int Count) in answer2)
 			{
 				Console.WriteLine((Pet, Count));
+			}
+
+			// Objective 2: count only dogs and cats explicitly; 
+			// create a third group "Other" for the rest
+
+			// Solution 1:
+			IEnumerable<KeyValuePair<string, int>> answerDogsCats = animals.Split(',')
+				.CountBy(a => a != "Dog" && a != "Cat" ? "Other" : a);
+
+			Console.WriteLine("\nObjective 2 - Solution 1:");
+			foreach (KeyValuePair<string, int> kvp in answerDogsCats)
+			{
+				Console.WriteLine((kvp.Key, kvp.Value));
+			}
+
+			// Solution 2:
+			Dictionary<string, int> answerDogsCats2 = animals.Split(',')
+				.GroupBy(a => a != "Dog" && a != "Cat" ? "Other" : a)
+				.ToDictionary(g => g.Key, g => g.ToList().Count);
+
+			Console.WriteLine("\nObjective 2 - Solution 2:");
+			foreach (KeyValuePair<string, int> kvp in answerDogsCats2)
+			{
+				Console.WriteLine((kvp.Key, kvp.Value));
 			}
 		}
 	}
