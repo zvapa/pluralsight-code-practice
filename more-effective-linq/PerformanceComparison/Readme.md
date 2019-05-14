@@ -1,0 +1,1 @@
+This project aims to compare execution performance of Linq vs for loop vs parallel Linq
