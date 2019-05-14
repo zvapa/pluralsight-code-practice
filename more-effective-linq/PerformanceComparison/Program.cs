@@ -25,7 +25,6 @@ namespace PerformanceComparison
 			stopWatch.Stop();
 			Console.WriteLine($"Processing {listSize} items using LINQ in {stopWatch.ElapsedMilliseconds} ms");
 
-
 			// using for loop:
 			stopWatch.Restart();
 			double sum = 0;
@@ -48,7 +47,6 @@ namespace PerformanceComparison
 				.Sum();
 			stopWatch.Stop();
 			Console.WriteLine($"Processing {listSize} items using PLINQ in {stopWatch.ElapsedMilliseconds} ms");
-
 		}
 	}
 }
