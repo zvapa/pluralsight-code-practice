@@ -29,7 +29,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqChallenge6.LongestBook"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqChallenge7.CountingPets", "LinqChallenge7.CountingPets\LinqChallenge7.CountingPets.csproj", "{E6C6A8F6-34BD-464E-A0BC-485630406BE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqChallenge8.SwimLengthTimes", "LinqChallenge8.SwimLengthTimes\LinqChallenge8.SwimLengthTimes.csproj", "{9F3C37F0-4EB7-4D56-97EB-E529AD020A65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqChallenge8.SwimLengthTimes", "LinqChallenge8.SwimLengthTimes\LinqChallenge8.SwimLengthTimes.csproj", "{9F3C37F0-4EB7-4D56-97EB-E529AD020A65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqChallenge9.CountingConsecutiveSales", "LinqChallenge9.CountingConsecutiveSales\LinqChallenge9.CountingConsecutiveSales.csproj", "{752B80C1-862E-4B7F-8438-EEFC366C2957}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{9F3C37F0-4EB7-4D56-97EB-E529AD020A65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F3C37F0-4EB7-4D56-97EB-E529AD020A65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F3C37F0-4EB7-4D56-97EB-E529AD020A65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{752B80C1-862E-4B7F-8438-EEFC366C2957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{752B80C1-862E-4B7F-8438-EEFC366C2957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{752B80C1-862E-4B7F-8438-EEFC366C2957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{752B80C1-862E-4B7F-8438-EEFC366C2957}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
