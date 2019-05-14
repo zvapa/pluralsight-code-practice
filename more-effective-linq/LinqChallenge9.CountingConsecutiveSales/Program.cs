@@ -29,7 +29,6 @@ namespace LinqChallenge9.CountingConsecutiveSales
 				.Max(g => g.Count());
 
 			Console.WriteLine("Solution 2: " + solution2);
-
 		}
 	}
 }
