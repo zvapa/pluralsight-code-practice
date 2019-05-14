@@ -1,4 +1,4 @@
-#### "More Effective LINQ"
+#### More Effective LINQ
 
 This collection follows through [this](https://app.pluralsight.com/library/courses/linq-more-effective/table-of-contents) Pluralsight course on effective usage of LINQ in C#.
 The course explores various use cases of the library, along with extensions to Linq, and third party packages like MoreLinq.
